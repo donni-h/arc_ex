@@ -36,7 +36,11 @@ public abstract class NoteDatabase extends RoomDatabase {
                 // If you want to start with more words, just add them.
                 NoteDAO dao = INSTANCE.noteDAO();
                 Note note = new Note("First Note", "This is an example note!", 1);
+                Note note2 = new Note("Second Note", "This is an example note!", 2);
+                Note note3 = new Note("Third Note", "This is an example note!", 3);
                 dao.insert(note);
+                dao.insert(note2);
+                dao.insert(note3);
             });
         }
     };
